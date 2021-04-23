@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\clienteController;
+use App\Http\Controllers\productoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +20,8 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/cliente', [clienteController::class, 'index']);
+
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/producto', [productoController::class, 'index']);
 
 
